@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://creht1tfavfml"]
+[gd_scene load_steps=3 format=3 uid="uid://creht1tfavfml"]
+
+[ext_resource type="Texture2D" uid="uid://bkp1lrh2fti3n" path="res://icon.svg" id="1_wd6pw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifje0"]
+size = Vector2(126, 128)
 
 [node name="PlayerObject" type="Node2D"]
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+texture = ExtResource("1_wd6pw")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="PlayerSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSprite/RigidBody2D"]
+shape = SubResource("RectangleShape2D_ifje0")
