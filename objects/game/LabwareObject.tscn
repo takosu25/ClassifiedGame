@@ -9,7 +9,7 @@ size = Vector2(71, 86)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+[node name="LabwareSprite" type="Sprite2D" parent="RigidBody2D"]
 scale = Vector2(0.0607639, 0.0607639)
 texture = ExtResource("1_6ckk8")
 
