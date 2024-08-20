@@ -2,19 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://kx4bgwdrraeh" path="res://images/color-zikken-icon01.png" id="1_6ckk8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic04w"]
-size = Vector2(1152, 1427.48)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71nja"]
+size = Vector2(71, 86)
 
 [node name="LabwareObject" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.00001, 3)
-scale = Vector2(0.079861, 0.079861)
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="LabwareSprite" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.0607639, 0.0607639)
 texture = ExtResource("1_6ckk8")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="Sprite2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/RigidBody2D"]
-position = Vector2(7.15256e-05, 0)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_ic04w")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_71nja")
